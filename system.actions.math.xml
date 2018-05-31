@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Duayne Bernal</Author>
+  <LastAuthor>Techm8</LastAuthor>
+  <Created>2018-04-05T13:43:45Z</Created>
+  <LastSaved>2018-05-31T10:38:03Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>7970</WindowHeight>
+  <WindowWidth>19160</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ActiveSheet>1</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#E7E6E6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#E7E6E6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+   <Interior ss:Color="#E7E6E6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Setup">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="6" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="176.5"/>
+   <Column ss:Width="26.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="451"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="440.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="195"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Step</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Request</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Response</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.5">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Switch to test org</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;session.org.switch&quot;,&quot;params&quot;:{&quot;key&quot;:&quot;&lt;paste,config,orgKey&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="43.5">
+    <Cell><Data ss:Type="String">Create thing definition</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;thing_def.create&quot;,&quot;params&quot;:{&quot;key&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thingdef&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thingdef&quot;,&quot;autoDefProps&quot;:true,&quot;autoDefAttrs&quot;:true}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,campaign_math_thingdef&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="43.5">
+    <Cell><Data ss:Type="String">Create thing</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;thing.create&quot;,&quot;params&quot;:{&quot;key&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;, &quot;defKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thingdef&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="29">
+    <Cell><Data ss:Type="String">Create virtual CDP</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;cdp.config.create&quot;, &quot;params&quot;:{&quot;name&quot;:&quot;cdp.engine Virtual CDP&quot;, &quot;type&quot;:&quot;virtual&quot;, &quot;preferredSmsc&quot;: &quot;engr-us-kannel-tele2&quot;, &quot;switchEnabled&quot;:&quot;1&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;: &quot;&lt;copy,string,cdpEngineVirtualCDPId&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="58">
+    <Cell><Data ss:Type="String">Add a connection</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;: {&quot;command&quot;: &quot;cdp.engine.connection.add&quot;, &quot;params&quot;: {&quot;configId&quot;: &quot;&lt;paste,string,cdpEngineVirtualCDPId&gt;&quot;, &quot;esn&quot;: &quot;0&lt;prand,num,7&gt;001&quot;, &quot;iccid&quot;: &quot;&lt;prand,num,17&gt;001&quot;, &quot;imei&quot;: &quot;&lt;prand,num,12&gt;001&quot;, &quot;imsi&quot;: &quot;&lt;prand,num,12&gt;001&quot;, &quot;meid&quot;: &quot;A&lt;prand,hex,10&gt;001&quot;, &quot;msid&quot;: &quot;&lt;prand,num,7&gt;001&quot;, &quot;msisdn&quot;: &quot;&lt;prand,num,12&gt;001&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,cdpEngineSetupConnId&gt;&quot;}}}</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="math.expr">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="42" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="176.5"/>
+   <Column ss:Width="26.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="451"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="440.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="195"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Step</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Request</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Response</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Description</Data></Cell>
+   </Row>
+   <Row ss:Height="72.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with addition</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15+10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;25&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with addition</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with addition</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="101.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with addition</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15+10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;25&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with addition</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Index="8" ss:Height="87" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with subtraction</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15-10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;5&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with subtraction</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with subtraction</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="116" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with subtraction</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15-10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;5&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with subtraction</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s62"/>
+   <Row ss:Height="72.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with multiplication</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15*10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;150&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with multiplication</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with multiplication</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="101.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with multiplication</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15*10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;150&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with multiplication</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s62"/>
+   <Row ss:Height="72.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with division</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15/10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;1.5&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with division</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with division</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="101.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with division</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;15/10&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;1.5&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with division</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Index="26" ss:Height="72.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with exponentiation</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;3^4&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;81&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with exponentiation</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with exponentiation</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="101.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with exponentiation</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;3^4&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;81&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with exponentiation</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s62"/>
+   <Row ss:Height="72.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with sqrt</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;sqrt(81)&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;9&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with sqrt</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with sqrt</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="101.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with sqrt</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;sqrt(81)&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;9&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="14.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with sqrt</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:StyleID="s62"/>
+   <Row ss:Height="72.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with Force precedence of evaluation</Data></Cell>
+    <Cell><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.create&quot;,&quot;params&quot;:{&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;5*(15/10)&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;,&quot;failure&quot;:&quot;&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;comparison&quot;:&quot;equals&quot;,&quot;string2&quot;:&quot;7.5&quot;},&quot;routes&quot;:{&quot;failure&quot;:&quot;&quot;,&quot;true&quot;:&quot;$endSuccess&quot;,&quot;false&quot;:&quot;$endFailure&quot;}}},&quot;firstAction&quot;:&quot;0&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;copy,string,math_campaign&gt;&quot;}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with Force precedence of evaluation</Data></Cell>
+    <Cell><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.member.add&quot;,&quot;params&quot;:{&quot;campaignId&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;thingKey&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;bad&quot;:0,&quot;good&quot;:1}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with Force precedence of evaluation</Data></Cell>
+    <Cell><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.start&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:Height="101.5" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with Force precedence of evaluation</Data></Cell>
+    <Cell><Data ss:Type="Number">4</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.find&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;,&quot;orgId&quot;:&quot;&lt;paste,config,orgId&gt;&quot;,&quot;name&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;desc&quot;:&quot;&lt;paste,config,orgId&gt;_math_campaign&quot;,&quot;eventType&quot;:&quot;campaign.thing&quot;,&quot;actions&quot;:{&quot;0&quot;:{&quot;type&quot;:&quot;math.expr&quot;,&quot;params&quot;:{&quot;expr&quot;:&quot;5*(15/10)&quot;},&quot;routes&quot;:{&quot;success&quot;:&quot;1&quot;}},&quot;1&quot;:{&quot;type&quot;:&quot;string.compare&quot;,&quot;params&quot;:{&quot;comparison&quot;:&quot;equals&quot;,&quot;string1&quot;:&quot;$(action.0.value)&quot;,&quot;string2&quot;:&quot;7.5&quot;},&quot;routes&quot;:{&quot;false&quot;:&quot;$endFailure&quot;,&quot;true&quot;:&quot;$endSuccess&quot;}}},&quot;firstAction&quot;:&quot;0&quot;,&quot;status&quot;:&quot;completed&quot;,&quot;summary&quot;:{&quot;ready&quot;:0,&quot;inProgress&quot;:0,&quot;success&quot;:1,&quot;failure&quot;:0,&quot;retry&quot;:0}}}}</Data></Cell>
+   </Row>
+   <Row ss:Height="29" ss:StyleID="s62">
+    <Cell><Data ss:Type="String">Verify with Force precedence of evaluation</Data></Cell>
+    <Cell><Data ss:Type="Number">5</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;campaign.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,math_campaign&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <TopRowVisible>36</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>40</ActiveRow>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="math.if">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="1" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="176.5"/>
+   <Column ss:Width="26.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="451"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="440.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="195"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Step</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Request</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Response</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Description</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="Cleanup">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="5" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="176.5"/>
+   <Column ss:Width="26.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="451"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="440.5"/>
+   <Column ss:StyleID="s62" ss:AutoFitWidth="0" ss:Width="195"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Name</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Step</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Request</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Response</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.5">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Switch to test org</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">1</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;session.org.switch&quot;,&quot;params&quot;:{&quot;key&quot;:&quot;&lt;paste,config,orgKey&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="29">
+    <Cell><Data ss:Type="String">Delete thing1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">2</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;thing.delete&quot;,&quot;params&quot;:{&quot;key&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thing&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="29">
+    <Cell><Data ss:Type="String">Delete thing definition1</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">3</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;thing_def.delete&quot;,&quot;params&quot;:{&quot;key&quot;:&quot;&lt;paste,config,orgId&gt;_campaign_math_thingdef&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="14.5">
+    <Cell><Data ss:Type="String">Delete virtual CDP</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="Default"><Data ss:Type="String">{&quot;1&quot;:{&quot;command&quot;:&quot;cdp.config.delete&quot;,&quot;params&quot;:{&quot;id&quot;:&quot;&lt;paste,string,cdpEngineVirtualCDPId&gt;&quot;}}}</Data></Cell>
+    <Cell><Data ss:Type="String">{&quot;1&quot;:{&quot;success&quot;:true}}</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>5</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
